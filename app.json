@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "camera-app",
-    "slug": "camera-app",
-    "version": "1.0.0",
+    "name": "Slingshot",
+    "slug": "slingshot",
+    "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -11,20 +11,37 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermissionText": "Slingshot needs access to your Camera."
+        }
+      ]
     ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.trudypainter.slingshot"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "042d7beb-858f-49be-887d-a8027ec8d6d5"
+      }
+    },
+    "owner": "trudypainter"
   }
 }
